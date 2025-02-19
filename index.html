@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DronaHQ - New Value Proposition</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/theme/black.css">
+    <style>
+        .quote { font-style: italic; font-size: 1.5em; }
+        .highlight { color: #ffcc00; font-weight: bold; }
+        .logo { position: absolute; top: 10px; left: 10px; width: 100px; }
+        .fullscreen-btn { position: fixed; top: 10px; right: 10px; background: #000; color: #fff; padding: 10px; cursor: pointer; border-radius: 5px; z-index: 1000; }
+		
+          .two-column {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .left {
+        width: 50%;
+    }
+
+    .right {
+        width: 50%;
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+    }
+        
+        /* Timeline Styling */
+        .timeline-container {
+            position: relative;
+            width: 80%;
+            max-width: 600px;
+            margin: auto;
+            padding-top: 30px;
+            overflow-y: auto;
+            max-height: 70vh;
+            scroll-behavior: smooth;
+        }
+
+        .timeline-line {
+            position: absolute;
+            left: 50%;
+            top: 0;
+            width: 4px;
+            height: 100%;
+            background: #ffcc00;
+            transform: translateX(-50%);
+        }
+
+        .timeline-step {
+            position: relative;
+            display: flex;
+            align-items: center;
+            margin: 30px 0;
+            opacity: 0.3;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        .timeline-step.active {
+            opacity: 1;
+        }
+
+        .timeline-circle {
+            position: absolute;
+            left: 50%;
+            width: 20px;
+            height: 20px;
+            background: #ffcc00;
+            border-radius: 50%;
+            transform: translateX(-50%);
+        }
+
+        .timeline-content {
+            width: 50%;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+        }
+
+        .timeline-content h3 {
+            margin: 0;
+        }
+        
+         .ui-container {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .profile-card {
+        background: #222;
+        padding: 15px;
+        border-radius: 10px;
+        text-align: center;
+        width: 180px;
+        box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+    }
+
+    .profile-card img {
+        width: 80px;
+        border-radius: 50%;
+    }
+
+    .profile-card h3 {
+        margin: 10px 0 5px;
+    }
+
+    .profile-card p {
+        color: #ffcc00;
+        font-size: 0.9em;
+    }
+
+    .profile-card button {
+        background: #ffcc00;
+        color: black;
+        border: none;
+        padding: 8px 12px;
+        margin-top: 10px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    
+    /* Custom styling to gray out previous items */
+    .reveal .fragment.highlight-current {
+        opacity: 1; /* Make sure current item is fully visible */
+        transition: color 0.5s ease-in-out;
+    }
+
+    /* Gray out previous items */
+    .reveal .fragment.highlight-current.visible {
+        color: gray;
+    }
+
+    /* Ensure the most recent (active) one stays in full color */
+    .reveal .fragment.highlight-current.current-fragment {
+        color: white; /* Or any highlight color */
+    }
+    
+    </style>
+</head>
+<body>
+    <div class="fullscreen-btn" onclick="toggleFullScreen()">🔲 Full Screen</div>
+    <div class="reveal">
+        <div class="slides">
+            <img src="https://www.dronahq.com/wp-content/uploads/2023/02/logoWhite.png" class="logo" alt="DronaHQ Logo">
+            
+            <!-- Slide 1: DronaHQ New Value Proposition -->
+            <section>
+                <h1>DronaHQ v3.0 🚀</h1>
+                <h2>Speed of AI + Flexibility of #LowCode</h2>
+                <p>Fewer headaches, more building.</p>
+                <p>Empowering engineering teams to **ship internal apps faster** without the friction of frontend complexity.</p>
+            </section>
+            
+            <section>
+    <h1>Brief History of Web Apps</h1>
+</section>
+            
+            <!-- Slide 2: Timeline View -->
+            <section id="timeline-slide">
+                <h2>Evolution of Web Apps</h2>
+                <div class="timeline-container" id="timelineContainer">
+                    <div class="timeline-line"></div>
+                    
+                    <div class="timeline-step active" id="step-1">
+                        <div class="timeline-circle"></div>
+                        <div class="timeline-content">
+                            <h3>1990s - The Web Begins</h3>
+                            <p>Basic HTML pages, no interactivity.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-step" id="step-2">
+                        <div class="timeline-circle"></div>
+                        <div class="timeline-content">
+                            <h3>2000s - Rise of JavaScript</h3>
+                            <p>Web apps became interactive with AJAX.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-step" id="step-3">
+                        <div class="timeline-circle"></div>
+                        <div class="timeline-content">
+                            <h3>2010s - Frontend Specialization</h3>
+                            <p>Rise of frameworks like React, Angular, Vue.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-step" id="step-4">
+                        <div class="timeline-circle"></div>
+                        <div class="timeline-content">
+                            <h3>2020s - AI & Low Code</h3>
+                            <p>Rapid UI development with automation.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Slide 4: explosion  Web Apps -->
+
+
+
+
+
+
+
+<section>
+    <h2>The Frontend Explosion</h2>
+    <div class="two-column">
+        <!-- Left: Text Content -->
+        <div class="left">
+            <ul>
+    <li class="highlight-current">The 2010s saw a shift toward rich, interactive UIs.</li>
+    <li class="fragment highlight-current">Platforms like <span class="highlight">Facebook, Instagram, Airbnb</span> made frontend engineering a priority.</li>
+    <li class="fragment highlight-current">Modern JS frameworks like <strong>Angular (2010), React (2013), and Vue (2014)</strong> enabled fast, dynamic web apps.</li>
+    <li class="fragment highlight-current">Mobile-first design and <strong>Single Page Applications (SPAs)</strong> became the new standard.</li>
+</ul>
+        </div>
+
+        <!-- Right: Profile Card UI -->
+        <div class="right">
+            <div class="profile-card">
+                <img src="https://i.imgur.com/85G8qI0.jpeg" alt="Profile Picture">
+                <h3>Jane Doe</h3>
+                <p>Frontend Engineer</p>
+                <button>Connect</button>
+            </div>
+            <div >
+                <img src="https://cdn.prod.website-files.com/63fc977c14aaea404dce4439/66bc75d45a02c8e53151bdc8_656dd3307d8a6df13e572c38_Image%252014.webp" alt="Profile Picture">
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+            
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.js"></script>
+    <script>
+        Reveal.initialize({
+            showNotes: true,
+            width: "100%",
+            height: "100%",
+            keyboard: {
+                38: function() { moveTimeline(-1); }, // Up Arrow
+                40: function() { moveTimeline(1); },  // Down Arrow
+                37: 'prev', // Left Arrow for previous slide
+                39: 'next'  // Right Arrow for next slide
+            }
+        });
+
+        function toggleFullScreen() {
+            if (!document.fullscreenElement) {
+                document.documentElement.requestFullscreen();
+            } else {
+                if (document.exitFullscreen) {
+                    document.exitFullscreen();
+                }
+            }
+        }
+
+        let currentStep = 1;
+        function moveTimeline(direction) {
+            let nextStep = document.getElementById(`step-${currentStep + direction}`);
+            if (nextStep) {
+                document.getElementById(`step-${currentStep}`).classList.remove('active');
+                nextStep.classList.add('active');
+                currentStep += direction;
+                nextStep.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+        }
+    </script>
+</body>
+</html>
