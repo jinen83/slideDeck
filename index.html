@@ -6,6 +6,7 @@
     <title>DronaHQ - New Value Proposition</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/theme/black.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
         .quote { font-style: italic; font-size: 1.5em; }
         .highlight { color: #ffcc00; font-weight: bold; }
@@ -170,29 +171,34 @@
         text-align: center; /* Center-align content */
         display: flex;
         flex-direction: column;
-        justify-content: center;
+         justify-content: center;
+        align-items: center; /* Ensure complete centering */
         height: 100vh; /* Full-screen slide */
+        padding-top: 30vh; /* Adds margin from top */
     }
 
     /* Large heading */
     .custom-slide h1 {
-        font-size: 100px;
+        font-size: 60px;
         font-weight: bold;
         line-height: 1.2;
         margin: 0;
+       
     }
 
     /* Subtitle text */
     .custom-slide .subtitle {
-        font-size: 50px;
+        font-size: 30px;
         opacity: 0.8; /* Slightly faded effect */
         margin-top: 10px;
     }
     
-    chart-container {
-        width: 300px;
-        height: 300px;
-    }
+    
+    
+    canvas {
+            max-width: 80vw;
+            max-height: 50vh;
+        }
 
     
     </style>
@@ -212,60 +218,49 @@
             </section>
             
             <section>
-    <h1>Brief History of Web Apps</h1>
+            <section>
+    <h1>Brief History of Web Apps</h1></section>
+    <section>
+     <h3>1990s - The Web Begins</h3>
+                            <p>Basic HTML pages, no interactivity.</p>
+                            </section>
+<section>
+<h3>2000s - Rise of JavaScript</h3>
+                            <p>Web apps became interactive with AJAX.</p>
+  </section>
+  
+  <section>
+  
+   <h3>2010s - Frontend Specialization</h3>
+                            <p>Rise of frameworks like React, Angular, Vue.</p>
+  </section>
+  
+  <section>
+  
+   <h3>2020s - AI & Low Code</h3>
+                            <p>Rapid UI development with automation.</p>
+  </section>
+                            
+                            
 </section>
             
-            <!-- Slide 2: Timeline View -->
-            <section id="timeline-slide">
-                <h2>Evolution of Web Apps</h2>
-                <div class="timeline-container" id="timelineContainer">
-                    <div class="timeline-line"></div>
-                    
-                    <div class="timeline-step active" id="step-1">
-                        <div class="timeline-circle"></div>
-                        <div class="timeline-content">
-                            <h3>1990s - The Web Begins</h3>
-                            <p>Basic HTML pages, no interactivity.</p>
-                        </div>
-                    </div>
-
-                    <div class="timeline-step" id="step-2">
-                        <div class="timeline-circle"></div>
-                        <div class="timeline-content">
-                            <h3>2000s - Rise of JavaScript</h3>
-                            <p>Web apps became interactive with AJAX.</p>
-                        </div>
-                    </div>
-
-                    <div class="timeline-step" id="step-3">
-                        <div class="timeline-circle"></div>
-                        <div class="timeline-content">
-                            <h3>2010s - Frontend Specialization</h3>
-                            <p>Rise of frameworks like React, Angular, Vue.</p>
-                        </div>
-                    </div>
-
-                    <div class="timeline-step" id="step-4">
-                        <div class="timeline-circle"></div>
-                        <div class="timeline-content">
-                            <h3>2020s - AI & Low Code</h3>
-                            <p>Rapid UI development with automation.</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            
-            <!-- Slide 4: explosion  Web Apps -->
-<section class="custom-slide">
-	<div class="left">
-    <h1>Drive Product Differentiation<br>and Innovation</h1>
+         
+<section>
+<section>
+<h3> As web was becoming powerful, growing sentiment amongst tech leaders was </h3></section>
+<section>
+    <div style="display: flex;">
+        <div style="flex: 1;">
+            <h3>Drive Product Differentiation<br>and Innovation</h3>
     <p class="subtitle">With UI and UX Design</p>
-    </div>
-    <div class="right">
-    <div class="chart-container">
-            <canvas id="uxPieChart"></canvas>
+        </div>
+        <div style="flex: 1;">
+          <img src="https://upload.wikimedia.org/wikipedia/en/3/33/Silicon_valley_title.png" 
+     alt="Silicon Valley Title" 
+     style="width: 500px; height: auto;">
         </div>
     </div>
+</section>
 </section>
 
  <section>
@@ -283,27 +278,12 @@
                 "Good design is actually a lot harder to notice than poor design, in part because good designs fit our needs so well that the design is invisible."
             </blockquote>
         </section>
-        <section>
-            <h2>Satya Nadella on Empathy in UX</h2>
-            <img src="https://blogassets.leverageedu.com/blog/wp-content/uploads/2020/07/02171800/Education_of_Satya_Nadella-760x475.jpg" alt="Satya Nadella" width="300">
-            <blockquote>
-                "Empathy makes us better innovators. If you look at the most successful products we have created, it comes from us having a deep sense of empathy about the unmet needs of our customers."
-            </blockquote>
-        </section>
+        
     </section>
 </section>
 
 
-<section>
-        <h2>UX & Design Thinking: A Market Differentiator</h2>
-        <ul>
-            <li>Companies leveraging UX and design thinking gain a competitive advantage.</li>
-            <li>Superior UX leads to higher customer satisfaction and retention.</li>
-            <li>Businesses investing in UX see up to <strong>400% ROI</strong> (Forrester Research).</li>
-            <li>Well-designed enterprise tools boost productivity and reduce friction.</li>
-            <li>Market leaders prioritize UX to win in competitive landscapes.</li>
-        </ul>
-    </section>
+
 
 
 
@@ -336,6 +316,24 @@
     </div>
 </section>
 
+<section> <!-- venture funding -->
+            <h2>Venture Funding Boom</h2>
+            <p>At the same time in 2010s, <span class="highlight">venture funding exploded</span>, driving innovation.</p>
+            <canvas id="vcFundingChart"></canvas>
+        </section>
+
+<section> <!-- user experience -->
+
+ <h2>User Experience Evolution</h2>
+            <ul>
+                <li>User experience was initially defined for consumers.</li>
+                <li>It soon expanded into **employee experience**.</li>
+                <li>Employees were accustomed to **legacy systems** (SAP, Workday, Oracle).</li>
+                <li>Expectation shifted to match **consumer apps** (Facebook, Instagram, WhatsApp).</li>
+            </ul>
+</section>
+
+ 
 
 
 <section>
@@ -355,17 +353,7 @@
     <section>Sub-topic 2</section>
 </section>
 
-<section>
-    <div style="display: flex;">
-        <div style="flex: 1;">
-            <h3>Left Column</h3>
-            <p>Text content here</p>
-        </div>
-        <div style="flex: 1;">
-            <img src="image.jpg" alt="Image">
-        </div>
-    </div>
-</section>
+
 
 <section>
     <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; width: 100%;">
@@ -474,29 +462,33 @@
             document.getElementById('first-bullet').classList.add('gray-out');
         });
         
-        var ctx = document.getElementById('uxPieChart').getContext('2d');
-        new Chart(ctx, {
-            type: 'doughnut',
-            data: {
-                labels: ['Believes UX is a Differentiator', 'Neutral/Disagree'],
-                datasets: [{
-                    data: [70, 30],
-                    backgroundColor: ['#ffcc00', '#444'],
-                    hoverOffset: 4
-                }]
-            },
-            options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                plugins: {
-                    legend: {
-                        display: false
-                    }
-                }
+       
+        
+        
+    });
+    
+  
+
+const ctx = document.getElementById('vcFundingChart').getContext('2d');
+    const vcFundingChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: [2005, 2010, 2015, 2020],
+            datasets: [{
+                label: "VC Funding (in Billion $)",
+                data: [30, 50, 80, 150], // Example values
+                borderColor: 'red',
+                borderWidth: 2,
+                fill: false
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            scales: {
+                y: { beginAtZero: true }
             }
-        });
-        
-        
+        }
     });
         
     </script>
