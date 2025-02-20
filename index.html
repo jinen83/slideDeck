@@ -352,6 +352,22 @@
     </section>
 </section>
 
+<section>
+  
+  <section>
+    <p>Venture funding led to the proliferation of internet startups, particularly in B2C space, eCommerce, and SaaS sectors. These companies were building innovative internal tools to enable employees to operate more efficiently and effectively.</p>
+  </section>
+
+  <section>
+    <p>Also B2C, eCommerce and SaaS companies scaled rapidly & they found that off-the-shelf tools were not meeting their needs from operations perspective. Custom internal tools became crucial for handling the unique workflows, data, and processes that these companies relied on.</p>
+  </section>
+  
+
+  <section>
+    <h2>Summarizing the demand centers for frontend engineering</h2>
+    <canvas id="demandChart" width="400" height="400"></canvas>
+  </section>
+</section>
 
 
 
@@ -492,6 +508,39 @@ const ctx = document.getElementById('vcFundingChart').getContext('2d');
             }
         }
     });
+    
+    //piechart start
+    var pieCtx = document.getElementById('demandChart').getContext('2d');
+  var demandChart = new Chart(pieCtx, {
+    type: 'pie',
+    data: {
+      labels: ['Employee Experience', 'Customer Experience', 'Internal Tools'],
+      datasets: [{
+        data: [30, 40, 30], // Modify percentages as needed
+        backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56'],
+        borderColor: ['#FFFFFF', '#FFFFFF', '#FFFFFF'],
+        borderWidth: 2
+      }]
+    },
+    options: {
+      responsive: true,
+      plugins: {
+        legend: {
+          position: 'top',
+        },
+        tooltip: {
+          callbacks: {
+            label: function(tooltipItem) {
+              return tooltipItem.label + ': ' + tooltipItem.raw + '%';
+            }
+          }
+        }
+      }
+    }
+  });
+  //piechart over
+    
+    
         
     </script>
 </body>
